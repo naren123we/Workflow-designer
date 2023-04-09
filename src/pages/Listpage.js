@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import spinner from '../images/Fading line.gif'
 
 const Listpage = () => {
-    const {workflow_data,error,loading} =UseGetdata()
+    const {workflow_data,error,loading} =UseGetdata('https://64307b10d4518cfb0e50e555.mockapi.io/workflow')
 
 
     if(loading){

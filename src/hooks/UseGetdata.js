@@ -1,13 +1,14 @@
 import  { useEffect,useState } from 'react'
 
-const UseGetdata = () => {
- const url='https://64307b10d4518cfb0e50e555.mockapi.io/modules?page=1&limit=5';
+const UseGetdata = (url) => {
+ 
  const [workflow_data,setdata]=useState([])
  const [error,seterror]=useState('')
  const [loading,setloading]=useState([])
 
     useEffect(()=>{
-        async function Getdata(){
+        async function Getdata(url){
+          
             try{
                 setloading(true)
                  const res= await fetch(url)
@@ -24,9 +25,9 @@ const UseGetdata = () => {
 
         }
      
-Getdata()
+Getdata(url)
 
-    },[])
+    },[url])
 
 
 
